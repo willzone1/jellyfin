@@ -545,7 +545,7 @@ namespace MediaBrowser.Providers.MediaInfo
         /// <summary>
         /// The dummy chapter duration
         /// </summary>
-        private readonly long _dummyChapterDuration = TimeSpan.FromMinutes(5).Ticks;
+        private readonly long _dummyChapterDuration = TimeSpan.FromMinutes(1).Ticks;
 
         /// <summary>
         /// Adds the dummy chapters.
@@ -570,7 +570,7 @@ namespace MediaBrowser.Providers.MediaInfo
             var index = 1;
 
             // Limit to 100 chapters just in case there's some incorrect metadata here
-            while (currentChapterTicks < runtime && index < 100)
+            while (currentChapterTicks < runtime && index < 250)
             {
                 chapters.Add(new ChapterInfo
                 {
